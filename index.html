@@ -21,19 +21,19 @@
         <div class="grid grid-cols-3 gap-4">
             <div class="bg-[#FFFFFF] p-5 rounded-xl"> 
                 <p class="text-[#323B49]">Total</p>
-                <p class="font-bold">0</p>
+                <p id="total" class="font-bold">0</p>
             </div>
             <div class="bg-[#FFFFFF] p-5 rounded-xl">
                 <p class="text-[#323B49]">Interview</p>
-                <p class="font-bold text-green-600">0</p>
+                <p id="interview" class="font-bold text-green-600">0</p>
             </div>
             <div class="bg-[#FFFFFF] p-5 rounded-xl">
                 <p class="text-[#323B49]">Rejected</p>
-                <p class="font-bold text-red-700">0</p>
+                <p id="rejected" class="font-bold text-red-700">0</p>
             </div>
         </div>
     </header>
-    <main class="mx-auto my-0 container p-2.5">
+    <main id="main-container" class="mx-auto my-0 container p-2.5">
         <div class="flex flex-row justify-between items-center mt-12 mb-6">
             <div> 
                 <h3>Available Jobs</h3>
@@ -43,23 +43,23 @@
             </div>
         </div>
         <div class="mb-4">
-            <button class="text-[#FFFFFF] bg-[#3B82F6] px-5 py-2 rounded-xl mr-2.5">All</button>
-            <button class="text-[#64748B] bg-[#FFFFFF] px-5 py-2 rounded-xl mr-2.5">Interview</button>
-            <button class="text-[#64748B] bg-[#FFFFFF] px-5 py-2 rounded-xl mr-2.5">Rejected</button>
+            <button onclick="switchTab('all')" id="tab-all" class="filter-btn text-[#FFFFFF] bg-[#3B82F6] px-5 py-2 rounded-xl mr-2.5 cursor-pointer">All</button>
+            <button onclick="switchTab('interview')" id="tab-interview" class="filter-btn text-[#64748B] bg-[#FFFFFF] px-5 py-2 rounded-xl mr-2.5 cursor-pointer">Interview</button>
+            <button onclick="switchTab('rejected')" id="tab-rejected" class="filter-btn text-[#64748B] bg-[#FFFFFF] px-5 py-2 rounded-xl mr-2.5 cursor-pointer">Rejected</button>
         </div>
-        <section class="p-2.5">
+        <section id="allCards" class="p-2.5">
             <div class="flex flex-row justify-between bg-[#FFFFFF] p-6 mb-4 rounded-md">
                 <div> 
-                    <h6 class="text-[black] font-semibold text-2xl mb-1">Mobile First Corp</h6>
-                    <p class="text-[#64748B]">React Native Developer</p>
-                    <p class="text-[#64748B] mt-5 mb-5">Remote • Full-time • $130,000 - $175,000</p>
-                    <button class="bg-[#EEF4FF] px-3 py-2 rounded text-black">NOT APPLIED</button>
-                    <p class="text-[#323B49] mt-2 mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
-                    <button class="text-[#10B981] px-3 py-2 border rounded mr-2">INTERVIEW</button>
-                    <button class="text-[#EF4444] px-3 py-2 border rounded">REJECTED</button>
+                    <h6 class="company-name text-[black] font-semibold text-2xl mb-1">Mobile First Corp</h6>
+                    <p class="position text-[#64748B]">React Native Developer</p>
+                    <p class="job-about text-[#64748B] mt-5 mb-5">Remote • Full-time • $130,000 - $175,000</p>
+                    <button class="job-status bg-[#EEF4FF] px-3 py-2 rounded text-black">NOT APPLIED</button>
+                    <p class="job-details text-[#323B49] mt-2 mb-5">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <button id="interview-btn" class="interview-btn  text-[#10B981] px-3 py-2 border rounded mr-2 cursor-pointer">INTERVIEW</button>
+                    <button id="rejected-btn" class="text-[#EF4444] px-3 py-2 border rounded cursor-pointer">REJECTED</button>
                 </div>
                 <div> 
-                    <img src="./delete.png" class="w-12 md:w-12 lg:w-12 max-[576px]:w-28" alt="">
+                    <img src="./delete.png" class="delete-btn w-12 md:w-12 lg:w-12 max-[576px]:w-28" alt="">
                 </div>
             </div>
             <div class="flex flex-row justify-between bg-[#FFFFFF] p-6 mb-4 rounded-md">
@@ -162,6 +162,6 @@
             </div>
         </section>
     </main>
-
+    <script src="script.js"></script>
 </body>
 </html>
