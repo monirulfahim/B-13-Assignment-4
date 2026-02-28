@@ -107,6 +107,8 @@ jobsAvailable()
 
 mainContainer.addEventListener('click', function(event){
     if(event.target.classList.contains('interview-btn')){
+        if(currentStatus === 'tab-interview')
+        return;
         const parentNode = event.target.parentNode.parentNode;
         const companyName = parentNode.querySelector('.company-name').innerText;
         const jobPosition = parentNode.querySelector('.position').innerText;
@@ -139,6 +141,8 @@ mainContainer.addEventListener('click', function(event){
         emptyStatusCheck()
     }
     else if(event.target.classList.contains('rejected-btn')){
+        if(currentStatus === 'tab-rejected')
+        return;
         const parentNode = event.target.parentNode.parentNode;
         const companyName = parentNode.querySelector('.company-name').innerText;
         const jobPosition = parentNode.querySelector('.position').innerText;
