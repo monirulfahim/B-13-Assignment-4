@@ -1,52 +1,35 @@
-### Answer 1 :
+# Name Of My Project:
 
-getElementById() : getElementById() means finds one single element by its id. It is used when we know the exact id.
-getElementsByClassName() : getElementsByClassName() means finds all elements with the same class name. It is used when many elements share the same class.
-querySelector(): querySelector() means finds the first element that matches a CSS selector. It is used when  we want to use CSS style selectors.
-querySelectorAll(): querySelectorAll() means finds all elements that match a CSS selector. It is used when you want to select many elements using CSS rules.
+JOB APPLICATION TRACKER
 
-### Answer 2:
+### Description Of Project:
 
-DOM is like a web page tree. we can create a new branch (element), then attach it to the tree. Steps:- 
-1.Create a new element
-2.Add text or content
-3.Add class or id
-4.Insert it into the page
+This project is a simple Job Application Tracker website. It helps users keep track of different job applications in an organized way.
+The website shows a list of available jobs. Each job card includes company name, job position, job details, and two buttons: Interview and Rejected.
+Users can interact with the website in these ways:
+If a user clicks Interview, the job moves to the interview list
+If a user clicks Rejected, the job moves to the rejected list
+Users can also delete any job card
+At the top of the page, there are three counters:
 
-### Answer 3:
+ #Total jobs
+ #Interview jobs
+ #Rejected jobs
 
-Event bubbling means when we click on something inside a web page, the event starts from the element we clicked and then moves upward to its parent elements, one by one.
-Imagine this situation:
+These numbers update automatically when the user takes any action.
+There are also three filter buttons:
 
-You are in a room,
-inside a house,
-inside a street,
-inside a city.
+###All → shows all jobs
+###Interview → shows only interview jobs
+###Rejected → shows only rejected jobs
 
-Now you clap your hands in the room.
+The website also shows a message like “No jobs available” when there are no jobs in a selected category.
 
-The sound is heard:
-1.First in the room
-2.Then in the house
-3.Then in the street
-4.Then in the city
+Overall, this project demonstrates how to manage data, update the user interface dynamically, and create an interactive web application in a simple way.
 
-Your clap starts at the smallest place and moves up to bigger places.
-That’s exactly how event bubbling works.
+### Technologies That Are Used In This Project:
 
-### Answer 4:
-
-Event Delegation means:
-Instead of listening to actions on many small items,
-you listen on one bigger parent,
-and let it handle what happens to the small items inside it.
-
-Event Delegation is useful. Because,
-
-1.Less work for the browser.
-2.Works for new items added later.
-3.Easier to manage our code.
-
-### Answer 5:
-
-preventDefault() stops the normal built-in behavior of something but stopPropagation() stops the action from traveling to bigger containers.
+This project is built using:
+HTML for structure
+Tailwind CSS for design and styling
+JavaScript for interactivity and logic
